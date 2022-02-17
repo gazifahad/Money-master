@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>saving</title>
     <!-- vanilla css link  -->
     <link rel="stylesheet" href="css/style.css">
     <!-- bootsctrap css  -->
@@ -21,11 +21,11 @@
         <setion class="container">
             <div class="row">
                 <!-- left side image  -->
-                <div class="column col-12 col-sm-12 col-md-6 ">
+                <div class="column col-12 col-sm-12 col-md-6 w-80">
                     <img class="container-fluid h-100" src="images/money.jpg" alt="">
 
                 </div>
-                <div class="column col-12 col-sm-12 col-md-6 bg-light">
+                <div class="column col-12 col-sm-12 col-md-6 bg-light w-80">
 
                     <!-- Calculator in the right side  -->
                     <!-- income fields  -->
@@ -46,8 +46,8 @@
                         <input id="cloth-cost" placeholder="type your cloth cost" type="number">
                     </label> <br> <br>
                    
-                    <p id="expense-error"class="bg-danger text-warning w-80"> expenses cannont be negative amount!</p>
-                    <p id="expense-greater-error"class="bg-danger text-warning w-80">expenses cannot be more than income!</p>
+                    <p id="expense-error"class="bg-danger text-warning"> expenses cannont be negative amount!</p>
+                    <p id="expense-greater-error"class="bg-danger text-warning">expenses cannot be more than income!</p>
                     <!-- calculation of expenses  -->
                     <button type="button" id="calculate-button" class="btn btn-info ps-3  pt-1 pb-1 pe-3">Calculate</button><br><br>
                     <!-- calculated fields  -->
@@ -58,6 +58,17 @@
                         <input id="save-percentage" type="number">%
                     </label>
                     <button type="button" id="calculate-save-button" class="btn btn-info ps-3  pt-1 pb-1 pe-3">save</button>
+                    <div id='saving-alert' class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                          
+                          <strong class="me-auto bg-warning text-danger">saving calculator</strong>
+                          <small>just now</small>
+                          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                          you cannot save more than your balance!
+                        </div>
+                      </div>
                     <h4 class="mt-2">Saving Amount: <span id="saving-amount-calculate">0</span></h4>
                     <h4 class="mt-2">Remaining Balace: <span id="remaining-amount-calculate">0</span></h4>
 
