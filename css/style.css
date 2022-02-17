@@ -1,5 +1,6 @@
 #expense-error{
     display: none;
+    /* width: 80%; */
 }
 #expense-greater-error{
     display: none;
