@@ -45,6 +45,10 @@
                     <label for="cloth-cost">Cloth:
                         <input id="cloth-cost" placeholder="type your cloth cost" type="number">
                     </label> <br> <br>
+                   
+                    <p id="expense-error"class="bg-danger text-warning w-80"> expenses cannont be negative amount!</p>
+                    <p id="expense-greater-error"class="bg-danger text-warning w-80">expenses cannot be more than income!</p>
+                    <!-- calculation of expenses  -->
                     <button type="button" id="calculate-button" class="btn btn-info ps-3  pt-1 pb-1 pe-3">Calculate</button><br><br>
                     <!-- calculated fields  -->
                     <h4>Total Expense: <span id="total-expense-calculate">0</span></h4>

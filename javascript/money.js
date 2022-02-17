@@ -13,7 +13,16 @@ function expenseCalculate(){
     const rentExpense=getInput('rent-cost');
     const clothExpense=getInput('cloth-cost');
     const totalExpense=parseFloat(foodExpense) + parseFloat(rentExpense) +parseFloat(clothExpense);
-    return totalExpense;
+    if(foodExpense<0 || rentExpense<0 || clothExpense<0){
+      document.getElementById('expense-error').style.display='block';
+     
+    }
+     
+    else{
+      document.getElementById('expense-error').style.display='none';
+      return totalExpense;
+    
+    }
 }
 
 
@@ -27,8 +36,15 @@ document.getElementById('calculate-button').addEventListener('click',function(){
     // get the income value and assign the remaining balance in the allocated field 
     const income=getInput('total-income');
     const remainingBalance= parseFloat(income)-expensed;
+    if(remainingBalance>0){
     document.getElementById('balance-calculate').innerText=remainingBalance;
-    
+    document.getElementById('expense-greater-error').style.display='none';
+    }
+    else if (remainingBalance<0){
+      {
+        document.getElementById('expense-greater-error').style.display='block';
+      }
+    }
 
 })
 // event listener for save button 
