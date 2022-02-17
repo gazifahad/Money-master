@@ -64,20 +64,27 @@ document.getElementById('calculate-save-button').addEventListener('click',functi
   const expensed= expenseCalculate();
   const remainingBalance= income-expensed;
   const savingAmount= (income*saving)/100;
-  if(savingAmount<remainingBalance){
-  // assign the saving amount in allocated field
-  document.getElementById("saving-amount-calculate").innerText=savingAmount;
-  
-  // calculate the balance after saving and assign it in allocated field 
-  
-  const lastBalance =  remainingBalance-savingAmount;
-  document.getElementById('remaining-amount-calculate').innerText=lastBalance;
-  document.getElementById('saving-alert').style.display='none';
-}
-// push error message for saving amount more than balance 
-else{
-  document.getElementById('saving-alert').style.display='block';
-
-}
+  if(saving>0){
+    document.getElementById('percentage-alert').style.display='none';
+    if(savingAmount<remainingBalance){
+      // assign the saving amount in allocated field
+      document.getElementById("saving-amount-calculate").innerText=savingAmount;
+      
+      // calculate the balance after saving and assign it in allocated field 
+      
+      const lastBalance =  remainingBalance-savingAmount;
+      document.getElementById('remaining-amount-calculate').innerText=lastBalance;
+      document.getElementById('saving-alert').style.display='none';
+    }
+    // push error message for saving amount more than balance 
+    else{
+      document.getElementById('saving-alert').style.display='block';
+    
+    }
+  }
+  else{
+    document.getElementById('percentage-alert').style.display='block';
+  }
+ 
 
 })
