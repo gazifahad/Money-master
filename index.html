@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- vanilla css link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- bootsctrap css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- font awesome link  -->
+    <script src="https://kit.fontawesome.com/00e9b578d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- declaring the title as header  -->
+    <header class="text-center bg-light text-primary">
+        <h1>Saving Calculator<span><i class="fa-duotone fa-calculator"></i></span></h1>
+    </header>
+    <main>
+        <setion class="container">
+            <div class="row">
+                <!-- left side image  -->
+                <div class="column col-12 col-sm-12 col-md-6 ">
+                    <img class="container-fluid h-100" src="images/money.jpg" alt="">
+
+                </div>
+                <div class="column col-12 col-sm-12 col-md-6 bg-light">
+
+                    <!-- Calculator in the right side  -->
+                    <!-- income fields  -->
+                    <div class="inputs text-center">
+                        <h4 class="text-center">Income statement</h4>
+                    <label for="total-income">Income
+                        <input id="total-income" placeholder="type your income" type="number">
+                    </label>
+                    <!-- Expense fields  -->
+                    <h4 class="text-center">Expense statement</h4>
+                    <label for="food-cost">Foods:
+                        <input id="food-cost" placeholder="type your food cost" type="number">
+                    </label> <br><br>
+                    <label for="rent-cost">Rents:
+                        <input id="rent-cost" placeholder="type your rent cost" type="number">
+                    </label> <br><br>
+                    <label for="cloth-cost">Cloth:
+                        <input id="cloth-cost" placeholder="type your cloth cost" type="number">
+                    </label> <br> <br>
+                    <button type="button" id="calculate-button" class="btn btn-info ps-3  pt-1 pb-1 pe-3">Calculate</button><br><br>
+                    <!-- calculated fields  -->
+                    <h4>Total Expense: <span id="total-expense-calculate">0</span></h4>
+                    <h4> Balace: <span id="balance-calculate">0</span></h4>
+                    <!-- saving field  -->
+                    <label for="save-percentage">save:
+                        <input id="save-percentage" type="number">%
+                    </label>
+                    <button type="button" id="calculate-save-button" class="btn btn-info ps-3  pt-1 pb-1 pe-3">save</button>
+                    <h4 class="mt-2">Saving Amount: <span id="saving-amount-calculate">0</span></h4>
+                    <h4 class="mt-2">Remaining Balace: <span id="remaining-amount-calculate">0</span></h4>
+
+
+            
+
+                    </div>
+                    
+
+
+                </div>
+            </div>
+        </setion>
+
+    </main>
+    <body>
+        
+    </body>
+    <footer>
+
+    </footer>
+    <!-- javascript link  -->
+    <script src="javascript/money.js"></script>
+    <!-- bootstrap javascript  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
