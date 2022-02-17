@@ -51,6 +51,7 @@ document.getElementById('calculate-button').addEventListener('click',function(){
       else if (remainingBalance<0){
         {
           document.getElementById('expense-greater-error').style.display='block';
+       
         }
       }
    }
@@ -72,8 +73,8 @@ document.getElementById('calculate-save-button').addEventListener('click',functi
       
       // calculate the balance after saving and assign it in allocated field 
       
-      const lastBalance =  remainingBalance-savingAmount;
-      document.getElementById('remaining-amount-calculate').innerText=lastBalance;
+      const lastRemainingBalance =  remainingBalance-savingAmount;
+      document.getElementById('remaining-amount-calculate').innerText=lastRemainingBalance;
       document.getElementById('saving-alert').style.display='none';
     }
     // push error message for saving amount more than balance 
